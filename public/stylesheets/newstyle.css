@@ -1,0 +1,96 @@
+/*
+  ========================================
+  Buttons
+  ========================================
+*/
+.btn {
+    border-radius: 5px;
+    color: #353374;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
+    letter-spacing: .5px;
+    margin: 30px 30% auto 30%;
+    text-transform: uppercase;
+    background: greenyellow;
+    z-index: 6;
+}
+.btn-alt {
+    border: 1px solid #912C2C;
+    padding: 10px 30px;
+}
+
+.btn-alt:hover {
+    background:#FFF;
+    color: #648880;
+}
+
+.bg_1{
+    background:url(../images/mainbackgrd.png);
+}
+
+/*.bg_1::before{*/
+    /*content:"";*/
+    /*background:yellowgreen;*/
+    /*background:url(../images/bg_1-b.png) bottom center no-repeat;*/
+    /*background-size:100% auto;*/
+    /*position:absolute;*/
+    /*top:0;*/
+    /*bottom:0;*/
+    /*left:0;*/
+    /*right:0;}*/
+
+
+.intro{
+    width:80%;
+    margin:15% auto auto auto;/*top right bottom left*/;
+    background: rgb(232, 208, 77);
+    letter-spacing: 1.0px;
+    border: 1px solid #000000;
+    border-radius: 10px 15px 10px 15px;
+    padding:10px;
+    min-height: 280px;
+    font-size:larger;
+    text-align: justify;
+}
+/*
+start
+*/
+.wrap{
+    width:100%;
+    min-height:100%;
+    max-width:720px;
+    min-width:320px;
+    margin:auto;
+    display:block;
+}
+.main{
+    position:absolute;
+    min-height:100%;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    max-width:720px;
+    margin:auto;
+}
+
+/*
+animation
+*/
+.example-enter {
+    opacity: 0.01;
+    transition: opacity .5s ease-in;
+}
+
+.example-enter.example-enter-active {
+    opacity: 1;
+}
+.example-leave {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+}
+
+.example-leave.example-leave-active {
+    opacity: 0.01;
+}

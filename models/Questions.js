@@ -1,0 +1,314 @@
+/**
+ * Created by joy on 2015/6/13.
+ */
+var questions=[];
+
+questions.push(
+    {
+        id:1,
+        title:"哪一项最符合您的症状？",
+        branches:[
+            {
+                title:"A",
+                content:"图1：暗红色出血",
+                image:"images/darkred.png",
+                next:2
+            },
+            {
+                title:"B",
+                content:"图2：紫红色充血",
+                image:"images/purplered.png",
+                next:3
+            },
+            {
+                title:"C",
+                content:"图3：鲜红色充血",
+                image:"images/freshred.png",
+                next:4
+            }
+        ]
+    }
+);
+questions.push(
+    {
+        id:2,
+        title:"有无黄白色分泌物？",
+        branches:[
+            {
+                title:"A",
+                content:"有分泌物"
+            },
+            {
+                title:"B",
+                content:"无分泌物",
+                next:5
+            }
+        ]
+    }
+);
+questions.push(
+    {
+        id:3,
+        title:"是否伴有视物模糊？",
+        branches:[
+            {
+                title:"A",
+                content:"有"
+            },
+            {
+                title:"B",
+                content:"无"
+            }
+        ]
+    }
+);
+questions.push(
+    {
+        id:4,
+        title:"是否伴有疼痛？",
+        branches:[
+            {
+                title:"A",
+                content:"不伴疼痛",
+                next:6
+            },
+            {
+                title:"B",
+                content:"眼睑疼痛",
+                next:7
+            },
+            {
+                title:"C",
+                content:"眼球前部疼痛，且黑眼球有压痛"
+            },
+            {
+                title:"D",
+                content:"眼球前部疼痛，但黑眼球无压痛",
+                next:8
+            },
+            {
+                title:"E",
+                content:"全眼球胀痛",
+                next:9
+            },
+        ]
+    }
+);
+questions.push(
+    {
+        id:5,
+        title:"出血前是否受到眼部外伤？",
+        branches:[
+            {
+                title:"A",
+                content:"是"
+            },
+            {
+                title:"B",
+                content:"否"
+            }
+        ]
+    }
+);
+questions.push(
+    {
+        id:6,
+        title:"有无黄白色分泌物？",
+        branches:[
+            {
+                title:"A",
+                content:"有分泌物"
+            },
+            {
+                title:"B",
+                content:"无分泌物",
+                next:10
+            }
+        ]
+    }
+);
+questions.push(
+    {
+        id:7,
+        title:"眼睑有无小水疱？",
+        branches:[
+            {
+                title:"A",
+                content:"有",
+                next:11
+            },
+            {
+                title:"B",
+                content:"无"
+            }
+        ]
+    }
+);
+questions.push(
+    {
+        id:8,
+        title:"眼睑有无小水疱？",
+        branches:[
+            {
+                title:"A",
+                content:"有",
+                next:12
+            },
+            {
+                title:"B",
+                content:"无",
+                next:13
+            }
+        ]
+    }
+);
+questions.push(
+    {
+        id:9,
+        title:"选择符合的选项（多选）：",
+        isMultiple: true,
+        branches:[
+            {
+                title:"A",
+                content:"长期使用免疫抑制剂"
+            },
+            {
+                title:"B",
+                content:"连续服用抗生素超过半年"
+            },
+            {
+                title:"C",
+                content:"1周内刚完成眼科手术"
+            },
+            {
+                title:"D",
+                content:"3周内发生过严重的眼外伤"
+            },
+            {
+                title:"E",
+                content:"脸部有严重炎症"
+            },
+            {
+                title:"F",
+                content:"以上均无"
+            }
+        ]
+    }
+);
+questions.push(
+    {
+        id:10,
+        title:"是否双眼同时发病？",
+        isMultiple: true,
+        branches:[
+            {
+                title:"A",
+                content:"双眼同时发病"
+            },
+            {
+                title:"B",
+                content:"双眼先后发病"
+            },
+            {
+                title:"C",
+                content:"单眼发病"
+            }
+        ]
+    }
+);
+questions.push(
+    {
+        id:11,
+        title:"出疱前2-3天眼睑有无剧烈疼痛？",
+        isMultiple: true,
+        branches:[
+            {
+                title:"A",
+                content:"有剧烈疼痛"
+            },
+            {
+                title:"B",
+                content:"无剧烈疼痛"
+            }
+        ]
+    }
+);
+questions.push(
+    {
+        id:12,
+        title:"出疱前2-3天眼睑有无剧烈疼痛？",
+        isMultiple: true,
+        branches:[
+            {
+                title:"A",
+                content:"有剧烈疼痛"
+            },
+            {
+                title:"B",
+                content:"无剧烈疼痛"
+            }
+        ]
+    }
+);
+questions.push(
+    {
+        id:13,
+        title:"角膜有无雾状混浊？",
+        isMultiple: true,
+        branches:[
+            {
+                title:"A",
+                content:"有",
+                next:14
+            },
+            {
+                title:"B",
+                content:"无",
+                next:15
+            }
+        ]
+    }
+);
+questions.push(
+    {
+        id:14,
+        title:"选择符合的选项（多选）：",
+        isMultiple: true,
+        branches:[
+            {
+                title:"A",
+                content:"一个月内被植物划伤"
+            },
+            {
+                title:"B",
+                content:"一个月内佩戴过隐形眼镜"
+            },
+            {
+                title:"C",
+                content:"二者均无"
+            }
+        ]
+    }
+);
+questions.push(
+    {
+        id:15,
+        title:"选择符合的选项（多选）：",
+        isMultiple: true,
+        branches:[
+            {
+                title:"A",
+                content:"一个月内被植物划伤"
+            },
+            {
+                title:"B",
+                content:"一个月内佩戴过隐形眼镜"
+            },
+            {
+                title:"C",
+                content:"二者均无"
+            }
+        ]
+    }
+);
+module.exports=questions;

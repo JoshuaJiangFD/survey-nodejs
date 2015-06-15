@@ -1,0 +1,33 @@
+/**
+ * Created by joy on 2015/6/12.
+ */
+var React = require('react');
+var Reflux = require('reflux');
+var Store = require('../stores/page');
+var CoverPage = require('./cover');
+var QuizPage = require('./quiz');
+var ListPage = require('./list');
+
+
+
+var body=document.body;
+
+var Index=React.createClass(
+    {
+        displayName: "exports",
+        mixins: [Reflux.connect(Store)],
+        render:function(){
+            body.className="";
+            switch(this.state.page){
+                case "cover":
+                    return React.createElement(CoverPage, null);
+                case "question":
+                    return React.createElement(QuizPage,{questions:this.state.questions});
+                default:
+                    return React.createElement(CoverPage, null);
+            }
+        }
+    }
+);
+
+module.exports=Index;
