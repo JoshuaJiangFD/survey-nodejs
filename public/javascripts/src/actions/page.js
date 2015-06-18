@@ -20,7 +20,7 @@ PageActions.finishQuestion.listen(function(answers){
         },
        dataType: 'json',
        success: function(validationResponse) {
-            console.log(validationResponse);
+           PageActions.finishQuestion.completed(validationResponse,null)
         }
     });
 

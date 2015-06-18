@@ -36,7 +36,8 @@ questions.push(
         branches:[
             {
                 title:"A",
-                content:"有分泌物"
+                content:"有分泌物",
+                conclusion:0
             },
             {
                 title:"B",
@@ -53,11 +54,13 @@ questions.push(
         branches:[
             {
                 title:"A",
-                content:"有"
+                content:"有",
+                conclusion:3
             },
             {
                 title:"B",
-                content:"无"
+                content:"无",
+                conclusion:4
             }
         ]
     }
@@ -79,7 +82,8 @@ questions.push(
             },
             {
                 title:"C",
-                content:"眼球前部疼痛，且黑眼球有压痛"
+                content:"眼球前部疼痛，且黑眼球有压痛",
+                conclusion:12
             },
             {
                 title:"D",
@@ -88,8 +92,14 @@ questions.push(
             },
             {
                 title:"E",
-                content:"全眼球胀痛",
+                content:"眼睛后部疼痛",
                 next:9
+            },
+            {
+                title:"F",
+                content:"全眼球胀痛",
+                next:9,
+                conclusion:23
             },
         ]
     }
@@ -101,11 +111,13 @@ questions.push(
         branches:[
             {
                 title:"A",
-                content:"是"
+                content:"是",
+                conclusion:1
             },
             {
                 title:"B",
-                content:"否"
+                content:"否",
+                conclusion:2
             }
         ]
     }
@@ -117,7 +129,8 @@ questions.push(
         branches:[
             {
                 title:"A",
-                content:"有分泌物"
+                content:"有分泌物",
+                conclusion:5
             },
             {
                 title:"B",
@@ -139,7 +152,8 @@ questions.push(
             },
             {
                 title:"B",
-                content:"无"
+                content:"无",
+                conclusion:11
             }
         ]
     }
@@ -170,27 +184,33 @@ questions.push(
         branches:[
             {
                 title:"A",
-                content:"长期使用免疫抑制剂"
+                content:"长期使用免疫抑制剂",
+                conclusion:22
             },
             {
                 title:"B",
-                content:"连续服用抗生素超过半年"
+                content:"连续服用抗生素超过半年",
+                conclusion:22
             },
             {
                 title:"C",
-                content:"1周内刚完成眼科手术"
+                content:"1周内刚完成眼科手术",
+                conclusion:22
             },
             {
                 title:"D",
-                content:"3周内发生过严重的眼外伤"
+                content:"3周内发生过严重的眼外伤",
+                conclusion:22
             },
             {
                 title:"E",
-                content:"脸部有严重炎症"
+                content:"脸部有严重炎症",
+                conclusion:22
             },
             {
                 title:"F",
-                content:"以上均无"
+                content:"以上均无",
+                conclusion:21
             }
         ]
     }
@@ -203,15 +223,18 @@ questions.push(
         branches:[
             {
                 title:"A",
-                content:"双眼同时发病"
+                content:"双眼同时发病",
+                conclusion:6
             },
             {
                 title:"B",
-                content:"双眼先后发病"
+                content:"双眼先后发病",
+                conclusion:7
             },
             {
                 title:"C",
-                content:"单眼发病"
+                content:"单单单单单单眼发病",
+                conclusion:8
             }
         ]
     }
@@ -224,11 +247,13 @@ questions.push(
         branches:[
             {
                 title:"A",
-                content:"有剧烈疼痛"
+                content:"有剧烈疼痛",
+                conclusion:9
             },
             {
                 title:"B",
-                content:"无剧烈疼痛"
+                content:"无剧烈疼痛",
+                conclusion:10
             }
         ]
     }
@@ -241,11 +266,13 @@ questions.push(
         branches:[
             {
                 title:"A",
-                content:"有剧烈疼痛"
+                content:"有剧烈疼痛",
+                conclusion:13
             },
             {
                 title:"B",
-                content:"无剧烈疼痛"
+                content:"无剧烈疼痛",
+                conclusion:4
             }
         ]
     }
@@ -277,15 +304,19 @@ questions.push(
         branches:[
             {
                 title:"A",
-                content:"一个月内被植物划伤"
+                content:"一个月内被植物划伤",
+                conclusion:15
             },
             {
                 title:"B",
-                content:"一个月内佩戴过隐形眼镜"
+                content:"一个月内佩戴过隐形眼镜",
+                conclusion:17
+
             },
             {
                 title:"C",
-                content:"二者均无"
+                content:"二者均无",
+                conclusion:16
             }
         ]
     }
@@ -298,15 +329,18 @@ questions.push(
         branches:[
             {
                 title:"A",
-                content:"一个月内被植物划伤"
+                content:"一个月内被植物划伤",
+                conclusion:18
             },
             {
                 title:"B",
-                content:"一个月内佩戴过隐形眼镜"
+                content:"一个月内佩戴过隐形眼镜",
+                conclusion:20
             },
             {
                 title:"C",
-                content:"二者均无"
+                content:"二者均无",
+                conclusion:19
             }
         ]
     }
