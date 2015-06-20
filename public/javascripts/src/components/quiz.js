@@ -3,7 +3,7 @@
  */
 var React = require('react/addons');
 var Reflux = require('reflux');
-var PageActions = require('../actions/page');
+var PageActions = require('../actions/actions');
 var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 
 var quiz=React.createClass({
@@ -92,7 +92,7 @@ var quiz=React.createClass({
                                                                         <div className="text02-in">
                                                                             <b>{answer.title}</b>
                                                                             <p>{answer.content}</p>
-                                                                            <img src={answer.image}/>
+                                                                            {answer.image&&<img src={answer.image}/>}
                                                                         </div>
                                                                     </div>
                                                                 </td>
@@ -104,6 +104,8 @@ var quiz=React.createClass({
                                         </table>
                                     </div>
                                 </div>
+                                <footer>
+                                </footer>
                             </div>
 
                         )

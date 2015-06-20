@@ -2,7 +2,7 @@
  * Created by joy on 2015/6/12.
  */
 var Reflux=require("reflux");
-var PageActions=require("../actions/page");
+var PageActions=require("../actions/actions");
 
 
 module.exports=Reflux.createStore(

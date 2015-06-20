@@ -2,7 +2,7 @@
  * Created by joy on 2015/6/13.
  */
 var React = require("react");
-var PageActions = require("../actions/page");
+var PageActions = require("../actions/actions");
 
 var cover=React.createClass(
     {
