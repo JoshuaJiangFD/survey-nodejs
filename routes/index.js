@@ -33,9 +33,6 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  var env=process.env.NODE_ENV||"development";
-  var appJS=env=="development"?'/javascripts/build/app.js':'/javascripts/build/app.js'
-
   res.render('index', { title: '找好啦！',questions:questions});
 });
 

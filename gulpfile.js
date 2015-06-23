@@ -21,10 +21,10 @@ var path = {
     MINIFIED_OUT_CSS:'all.min.css',
     OUT_APPJS:'app.js',
     ENTRY_POINT: './public/javascripts/src/app.js',
-    DEST_SRC:'./public/javascripts/build/',
-    DEST_BUILD_JS:'dist/build/javascripts/',
-    DEST_BUILD_CSS:'dist/build/stylesheets/',
-    DEST_BUILD_VIEW:'dist/build/views/'
+    DEST_SRC:'./public/javascripts/',
+    DEST_BUILD_JS:'dist/static/javascripts/',
+    DEST_BUILD_CSS:'dist/static/stylesheets/',
+    DEST_BUILD_VIEW:'dist/views/'
 };
 
 gulp.task('watch',function(){
