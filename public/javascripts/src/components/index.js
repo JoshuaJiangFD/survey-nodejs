@@ -7,6 +7,7 @@ var Store = require('../stores/page');
 var CoverPage = require('./cover');
 var QuizPage = require('./quiz');
 var ListPage = require('./list');
+var resultPage=require('./result');
 
 
 
@@ -22,7 +23,9 @@ var Index=React.createClass(
                 case "cover":
                     return React.createElement(CoverPage, null);
                 case "question":
-                    return React.createElement(QuizPage,{questions:this.state.questions});
+                    return React.createElement(QuizPage,{questions:this.state.questions});/*second parameter is the props of component*/
+                case "result":
+                    return React.createElement(resultPage,{answer:this.state.finalAnswer});
                 default:
                     return React.createElement(CoverPage, null);
             }

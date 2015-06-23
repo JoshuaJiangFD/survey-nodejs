@@ -1,7 +1,32 @@
 var express = require('express');
 var questions=require('../models/Questions');
+var results=require('../models/Results');
 var url = require( "url" );
 var queryString = require( "querystring" );
+
+if (!Array.prototype.find) {
+  Array.prototype.find = function(predicate) {
+    if (this == null) {
+      throw new TypeError('Array.prototype.find called on null or undefined');
+    }
+    if (typeof predicate !== 'function') {
+      throw new TypeError('predicate must be a function');
+    }
+    var list = Object(this);
+    var length = list.length >>> 0;
+    var thisArg = arguments[1];
+    var value;
+
+    for (var i = 0; i < length; i++) {
+      value = list[i];
+      if (predicate.call(thisArg, value, i, list)) {
+        return value;
+      }
+    }
+    return undefined;
+  };
+}
+
 
 
 var router = express.Router();
@@ -28,7 +53,11 @@ router.get('/quiz',function(req,res,next){
 
   // as the object is created, the live below will print "bar"
   console.log( obj);
-  res.json('success');
+  var finalAnswerItem=obj[obj.length-1];
+  var finalQuestion=questions[finalAnswerItem.qid-1];
+  var finalAnswer=finalQuestion.branches.find(function(ele,idx,array){return ele.title==finalAnswerItem.answer;});
+  var conclusion =results.conclusions[finalAnswer.conclusion];
+  res.json(conclusion);
 });
 
 
