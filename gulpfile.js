@@ -92,7 +92,7 @@ gulp.task('copyImages',function(){
 gulp.task('replaceHTML', function(){
     gulp.src(path.HTML)
     .pipe(htmlreplace({
-            'css': path.DEST_BUILD_CSS+path.MINIFIED_OUT_CSS
+            'css': '/stylesheets/'+path.MINIFIED_OUT_CSS
         }))
     .pipe(gulp.dest(path.DEST_BUILD_VIEW));
 });
