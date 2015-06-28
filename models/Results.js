@@ -8,7 +8,7 @@
  * @constructor
  */
 function Conclusion(obj){
-    this.title=obj.titie;
+    this.title=obj.title;
     this.advice=obj.advice;
     this.rating=obj.rating;
 };

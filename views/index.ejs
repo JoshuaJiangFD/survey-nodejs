@@ -76,7 +76,7 @@
         var questions = <%-  JSON.stringify(questions)  %>;
         var xhr = new XMLHttpRequest();
         var progress = document.getElementById('progress');
-        xhr.open('GET', '/javascripts/app.js');
+        xhr.open('GET', '/javascripts/'+'<%- appPath %>');
         xhr.send();
         xhr.onload = function() {
           var response = xhr.response || xhr.responseText;

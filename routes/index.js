@@ -33,7 +33,8 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: '找好啦！',questions:questions});
+  var appfile=(process.env.NODE_ENV||'development')=='development'?"app.js":"app.min.js";
+  res.render('index', { title: '找好啦！',questions:questions,appPath:appfile});
 });
 
 router.get('/quiz',function(req,res,next){

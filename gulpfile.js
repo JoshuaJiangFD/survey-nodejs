@@ -24,6 +24,7 @@ var path = {
     DEST_SRC:'./public/javascripts/',
     DEST_BUILD_JS:'dist/static/javascripts/',
     DEST_BUILD_CSS:'dist/static/stylesheets/',
+    DEST_BUILD_IMAGES:'dist/static/images/',
     DEST_BUILD_VIEW:'dist/views/'
 };
 
@@ -63,7 +64,7 @@ gulp.task('javascripts', function(){
 });
 
 /**
- * build all.min.css, let is depends on 'javascripts' task
+ * build all.min.css, let it depends on 'javascripts' task
  */
 gulp.task('stylesheets',['javascripts'],function(){
     //include all the files under public/stylesheets but exclude reserved.css file with '!' prefixed.
@@ -75,6 +76,15 @@ gulp.task('stylesheets',['javascripts'],function(){
     .pipe(streamify(minifycss(path.MINIFIED_OUT_CSS)))
     .pipe(gulp.dest(path.DEST_BUILD_CSS));
 });
+
+/**
+ * copy images from public/images to path.DEST_BUILD_IMAGES('dist/static/images/')
+ */
+gulp.task('copyImages',function(){
+    gulp.src('./public/images/*')
+    .pipe(gulp.dest(path.DEST_BUILD_IMAGES));
+});
+
 
 /**
  * replace   <!--build:css--> in index.ejs file
@@ -110,4 +120,4 @@ gulp.task('default', ['watch']);
 /**
  * run before deployment
  */
-gulp.task('production', ['javascripts','stylesheets','replaceHTML']);
+gulp.task('production', ['javascripts','stylesheets','replaceHTML','copyImages']);
