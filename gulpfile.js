@@ -85,6 +85,13 @@ gulp.task('copyImages',function(){
     .pipe(gulp.dest(path.DEST_BUILD_IMAGES));
 });
 
+gulp.task('copyViews',function(){
+    gulp.src('./views/*')
+        .pipe(gulp.dest('dist/views/'));
+    gulp.src('./public/stylesheets/*')
+        .pipe(gulp.dest('dist/static/stylesheets/'));
+});
+
 
 /**
  * replace   <!--build:css--> in index.ejs file
@@ -102,8 +109,6 @@ gulp.task('replaceHTML', function(){
  * clean task for deleting all files in /dist folder
  */
 gulp.task('clean', function(cb){
-   //return gulp.src(['/dist/build'],{read:false})
-   // .pipe(clean({force:true}));
     del([
         path.DEST_BUILD_JS,
         path.DEST_BUILD_CSS,
@@ -120,4 +125,4 @@ gulp.task('default', ['watch']);
 /**
  * run before deployment
  */
-gulp.task('production', ['javascripts','stylesheets','replaceHTML','copyImages']);
+gulp.task('production', ['javascripts','stylesheets','copyViews','copyImages']);
