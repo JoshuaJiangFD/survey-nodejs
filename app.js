@@ -12,7 +12,10 @@ var users = require('./routes/users');
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+if (app.get('env') === 'development')
+  app.set('views', path.join(__dirname, 'views'));
+else
+  app.set('views', path.join(__dirname, 'dist/views'));
 app.set('view engine', 'ejs');
 
 
